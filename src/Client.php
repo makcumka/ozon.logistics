@@ -13,7 +13,7 @@ class Client
     public $tokenPath;
 
     private $hostURLTest = 'https://api-stg.ozonru.me';
-    private $hostURLProduction = 'https://api.ozon.ru';
+    private $hostURLProduction = 'https://xapi.ozon.ru';
 
     private $test = false;
 
