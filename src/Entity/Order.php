@@ -12,7 +12,6 @@ class Order extends BaseObject
         $requiredParams = [
             'orderNumber',
             'buyer',
-            'recipient',
             'payment',
             'deliveryInformation',
             'packages',

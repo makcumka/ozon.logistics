@@ -100,12 +100,11 @@ print_r($order->getOrder('1'));
 */
 
 
-//$delivery = new Delivery($client);
+$delivery = new Delivery($client);
 
 
-/*
-print_r($delivery->getCities());
-*/
+//print_r($delivery->getCities());
+
 
 /*
 print_r($delivery->getVariants([
