@@ -15,6 +15,19 @@ class Delivery extends BaseObject
 
     public function getVariants(array $params)
     {
+        $url = $this->pathURL . '/variants?' . http_build_query($params);
+
+        $result = $this->getClient()->request($url, 'GET');
+
+        if(!isset($result->data)) {
+            throw new \Exception('Param "data" not found');
+        }
+
+        return $result->data;
+    }
+
+    public function getVariantsByAddress(array $params)
+    {
         $requiredParams = [
             'deliveryType',
             'address',

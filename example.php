@@ -102,12 +102,16 @@ print_r($order->getOrder('1'));
 
 $delivery = new Delivery($client);
 
+print_r($delivery->getVariants([
+    'cityName' => 'Москва',
+    'pagination.size' => 10
+]));
 
 //print_r($delivery->getCities());
 
 
 /*
-print_r($delivery->getVariants([
+print_r($delivery->getVariantsByAddress([
     'deliveryType' => 'PickPoint',
     'address' => 'Курган',
     'radius' => 50,
