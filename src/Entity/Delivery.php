@@ -23,7 +23,7 @@ class Delivery extends BaseObject
             throw new \Exception('Param "data" not found');
         }
 
-        return $result->data;
+        return $result;
     }
 
     public function getVariantsByAddress(array $params)

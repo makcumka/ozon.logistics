@@ -104,7 +104,8 @@ $delivery = new Delivery($client);
 
 print_r($delivery->getVariants([
     'cityName' => 'Москва',
-    'pagination.size' => 10
+    'pagination.size' => 1,
+    'pagination.token' => 'AgAAAA=='
 ]));
 
 //print_r($delivery->getCities());
