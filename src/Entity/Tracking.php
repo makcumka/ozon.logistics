@@ -15,4 +15,15 @@ class Tracking extends BaseObject
 
         return $result;
     }
+
+    public function getTrackByOrderNumber(string $orderNumber)
+    {
+        if ($orderNumber === null) {
+            throw new \InvalidArgumentException('orderNumber is empty');
+        }
+
+        $url = $this->pathURL . '/byordernumber/?orderNumber=' . $orderNumber;
+
+        return $this->getClient()->request($url, 'GET');
+    }
 }

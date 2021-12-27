@@ -6,6 +6,7 @@ use Makcumka\OzonLogistics\Entity\Delivery;
 use Makcumka\OzonLogistics\Entity\Order;
 use Makcumka\OzonLogistics\Entity\Posting;
 use Makcumka\OzonLogistics\Entity\Document;
+use Makcumka\OzonLogistics\Entity\Tracking;
 
 $client = new Client([
     'clientId' => 'ApiTest_11111111-1111-1111-1111-111111111111',
@@ -99,17 +100,18 @@ print_r($order->cancelOrder(['11111']));
 print_r($order->getOrder('1'));
 */
 
-
+/*
 $delivery = new Delivery($client);
 
 print_r($delivery->getVariants([
-    'cityName' => 'Москва',
-    'pagination.size' => 1,
-    'pagination.token' => 'AgAAAA=='
+    'cityName' => 'Мирный',
+    'pagination.size' => 1000
 ]));
+*/
 
-//print_r($delivery->getCities());
-
+/*
+print_r($delivery->getCities());
+*/
 
 /*
 print_r($delivery->getVariantsByAddress([
@@ -148,4 +150,8 @@ print_r($delivery->calcTime([
 
 /*
 print_r($delivery->getFromPlaces());
+*/
+/*
+$Tracking = new Tracking($client);
+print_r($Tracking->getTrackByOrderNumber(''));
 */
