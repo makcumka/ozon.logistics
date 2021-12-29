@@ -15,7 +15,8 @@ class Order extends BaseObject
             'payment',
             'deliveryInformation',
             'packages',
-            'orderLines'
+            'orderLines',
+            'firstMileTransfer'
         ];
         $this->checkRequired($params, $requiredParams);
 

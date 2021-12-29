@@ -103,6 +103,9 @@ print_r($order->getOrder('1'));
 /*
 $delivery = new Delivery($client);
 
+print_r($delivery->getFromPlaces());
+*/
+/*
 print_r($delivery->getVariants([
     'cityName' => 'Мирный',
     'pagination.size' => 1000
@@ -115,24 +118,23 @@ print_r($delivery->getCities());
 
 /*
 print_r($delivery->getVariantsByAddress([
-    'deliveryType' => 'PickPoint',
-    'address' => 'Курган',
+    'deliveryType' => 'Courier',
+    'address' => 'Оренбург',
     'radius' => 50,
     'packages' => [
         (object)[
             'count' => 1,
             'dimensions' => [
-                'weight' => 2,
-                'length' => 10,
-                'height' => 20,
-                'width' => 20
+                'weight' => 3,
+                'length' => 44,
+                'height' => 42,
+                'width' => 24
             ],
             'price' => 5000
         ]
     ]
 ]));
 */
-
 /*
 print_r($delivery->calcAmount([
     'deliveryVariantId' => '17555210692000',
