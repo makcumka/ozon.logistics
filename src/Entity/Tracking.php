@@ -26,4 +26,10 @@ class Tracking extends BaseObject
 
         return $this->getClient()->request($url, 'GET');
     }
+
+    public function getTrackByList(array $list)
+    {
+        $params['articles'] = $list;
+        return $this->getClient()->request($this->pathURL . '/list', 'POST', $params);
+    }
 }
